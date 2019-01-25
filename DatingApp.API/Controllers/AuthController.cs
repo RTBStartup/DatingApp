@@ -25,9 +25,6 @@ namespace DatingApp.API.Controllers
             _config = config;
             
         }
-
-        
-
         [HttpPost("login")]
          public async Task<IActionResult> Login(UserForRegisterDto userForRegisterDto)
          {
@@ -56,8 +53,8 @@ namespace DatingApp.API.Controllers
            return Ok( new {
                token = tokenHandler.WriteToken(token)
            });
-
-         }
+        
+        }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
